@@ -19,10 +19,12 @@ async function createAirplane(req,res) {
 
     } catch(error){
 
-        ErrorResponse.message = "Something Went wrong Creating Airplane";
+        ErrorResponse.message = "Something Went wrong Creating  Airplane";
         ErrorResponse.error = error;
+       
+    
         return res  
-                .status(StatusCodes.INTERNAL_SERVER_ERROR)
+                .status(error.statusCode)
                 .json (ErrorResponse)
     }
 }
