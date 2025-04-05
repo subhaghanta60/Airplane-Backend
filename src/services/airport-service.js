@@ -11,7 +11,7 @@ async function createAirport(data) {
         return airport;
 
     } catch (error) {
-        console.log(error);
+
 
         if (error.name == 'SequelizeValidationError') {
 
